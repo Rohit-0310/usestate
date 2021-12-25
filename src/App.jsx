@@ -2,23 +2,60 @@ import { useState } from 'react';
 import './App.css';
 
 function App() {
-    const [count, setCount] = useState(10);
+    const [count, setCount] = useState(0);
     
    //const [data, setData]
-    const addOne = () => {
-        setCount(count+1)
-    }
-    const subOne = () => {
-        setCount(count-1)
-    }
 
-  return (
-    <div className="App">
-        <h3>Counter: {count}</h3>
-        <button onClick={addOne}>Add 1</button>
-        <button onClick={subOne}>Remove 1</button>
+   
+//     const addOne = () => {
+//         if(count < 10){
+//             setCount(count+1)
+//         } 
+//     };
+//     const subOne = () => {
+//         setCount(count-1)
+//     }
+
+//   return (
+//     <div className="App">
+//         <h3>Counter: {count}</h3>
+//         <button onClick={addOne}>Add 1</button>
+//         <button onClick={subOne}>Remove 1</button>
       
-    </div>
+//     </div>
+const changeCount = (value) => {
+        // setCount(count + value)
+        setCount((prev) => {
+            if(prev === 10 || prev === -10){
+                return 0
+            }
+            return prev + value
+        })
+};
+
+    // if(count > 10){
+    //     return <h1>Counter Reached max Value</h1>
+    // }
+    // if(count < -10){
+    //     return <h1>Counter Reached min Value</h1>
+    // }
+return (
+<div className="App">
+    <h3>Counter: {count}</h3>
+    {/* {count ===10  && (
+        <div>
+            <button onClick={() => changeCount(1)}>Add 1</button>
+            <button onClick={() => changeCount(-1)}>Sub 1</button>
+        </div>
+    )} */}
+    <div>
+            <button onClick={() => changeCount(1)}>Add 1</button>
+            <button onClick={() => changeCount(-1)}>Reduce 1</button>
+            <button onClick={() => changeCount(2)}>Double</button>
+
+            <div>Counter is {count % 2 === 0? "Even": "Odd"}</div>
+        </div>
+</div>
   );
 }
 
