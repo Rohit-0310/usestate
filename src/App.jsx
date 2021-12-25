@@ -3,6 +3,7 @@ import './App.css';
 
 function App() {
     const [count, setCount] = useState(0);
+    const [score, setScore] = useState(0);
     
    //const [data, setData]
 
@@ -45,6 +46,16 @@ const Divid = () => {
     // if(count < -10){
     //     return <h1>Counter Reached min Value</h1>
     // }
+
+    const changeScore = (value) => {
+        // setScore(Score + value)
+        setScore((prev) => {
+            if(prev === 10 || prev === -10){
+                return 0
+            }
+            return prev + value
+        })
+};
 return (
 <div className="App">
     <h3 className='heading'>Counter: {count}</h3>
@@ -62,6 +73,14 @@ return (
 
             <div>Counter is {count % 2 === 0? "Even": "Odd"}</div>
         </div>
+
+
+    <form>{score}</form>
+    <input type="number" name="input" id="input_id" />
+    <div>
+            <button onClick={() => changeScore(1)}>Add 1</button>
+            <button onClick={() => changeScore(-1)}>Reduce 1</button>
+    </div>
 </div>
   );
 }
