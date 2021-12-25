@@ -5,9 +5,30 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: indianred;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+button {
+  background-color:#37474F;
+  margin: 5px;
+  height: 30px;
+  width: 90px;
+  border-radius: 7px;
+  color:greenyellow;
+
+}
+.App{
+  margin-top: 50px;
+  font-size: 30px;
+}
+
+.heading{
+  color: #4A148C;
+  font-weight: 600;
+  font-size: 35px;;
 }

@@ -32,6 +32,12 @@ const changeCount = (value) => {
             return prev + value
         })
 };
+const Double = () => {
+            setCount(count*2)
+        }
+const Divid = () => {
+    setCount(count/2)
+}
 
     // if(count > 10){
     //     return <h1>Counter Reached max Value</h1>
@@ -41,7 +47,7 @@ const changeCount = (value) => {
     // }
 return (
 <div className="App">
-    <h3>Counter: {count}</h3>
+    <h3 className='heading'>Counter: {count}</h3>
     {/* {count ===10  && (
         <div>
             <button onClick={() => changeCount(1)}>Add 1</button>
@@ -51,7 +57,8 @@ return (
     <div>
             <button onClick={() => changeCount(1)}>Add 1</button>
             <button onClick={() => changeCount(-1)}>Reduce 1</button>
-            <button onClick={() => changeCount(2)}>Double</button>
+            <button onClick={Double}>Double</button>
+            <button onClick={Divid}>Half</button>
 
             <div>Counter is {count % 2 === 0? "Even": "Odd"}</div>
         </div>
