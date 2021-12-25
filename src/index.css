@@ -22,6 +22,7 @@ button {
   color:greenyellow;
 
 }
+
 .App{
   margin-top: 50px;
   font-size: 30px;
@@ -31,4 +32,14 @@ button {
   color: #4A148C;
   font-weight: 600;
   font-size: 35px;;
+}
+.e_o{
+    border: 1px solid black;
+    border-radius: 12px;
+    font-size: 26px;
+    height: 48px;
+    width: 270px;
+    background-color: #795548;
+    align-items: center;
+    color: rgb(224, 242, 254);
 }

@@ -48,6 +48,9 @@ const Divid = () => {
 return (
 <div className="App">
     <h3 className='heading'>Counter: {count}</h3>
+    <button className='e_o'>
+        Counter is {count % 2 === 0? "Even": "Odd"}
+    </button>
     {/* {count ===10  && (
         <div>
             <button onClick={() => changeCount(1)}>Add 1</button>
@@ -55,13 +58,13 @@ return (
         </div>
     )} */}
     <div>
+        <div className='top-btn'>
             <button onClick={() => changeCount(1)}>Add 1</button>
             <button onClick={() => changeCount(-1)}>Reduce 1</button>
             <button onClick={Double}>Double</button>
             <button onClick={Divid}>Half</button>
-
-            <div>Counter is {count % 2 === 0? "Even": "Odd"}</div>
         </div>
+    </div>
 </div>
   );
 }
